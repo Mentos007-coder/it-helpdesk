@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Create New Ticket</h3>
+<form method="POST" action="/new" class="mt-3">
+  <div class="mb-3">
+    <label class="form-label">Title</label>
+    <input type="text" name="title" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Description</label>
+    <textarea name="description" class="form-control" rows="3" required></textarea>
+  </div>
+  {% if user[2] in ['admin','technician'] %}
+  <div class="mb-3">
+    <label class="form-label">Assign to</label>
+    <select name="assigned_to" class="form-select">
+      <option value="">-- none --</option>
+      {% for u in users %}
+        <option value="{{ u[0] }}">{{ u[1] }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  {% endif %}
+  <button type="submit" class="btn btn-success">Create Ticket</button>
+</form>
+{% endblock %}

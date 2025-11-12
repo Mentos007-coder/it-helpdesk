@@ -1,0 +1,21 @@
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  transition: background 0.4s, color 0.3s;
+}
+[data-theme="light"] {
+  --bg: #f8f9fa;
+  --text: #111;
+}
+[data-theme="dark"] {
+  --bg: #121212;
+  --text: #eee;
+}
+.fade-in { animation: fadeIn 0.6s ease; }
+@keyframes fadeIn { from {opacity:0; transform:translateY(10px);} to {opacity:1; transform:translateY(0);} }
+.card.hover-up { transition:transform 0.25s, box-shadow 0.25s; }
+.card.hover-up:hover { transform:translateY(-4px); box-shadow:0 4px 12px rgba(0,0,0,0.15); }
+.table { border-radius:10px; overflow:hidden; }
+footer { opacity:0.8; }
+@media (max-width:768px){ .table{font-size:0.8rem;} .navbar-brand{font-size:1rem;} }

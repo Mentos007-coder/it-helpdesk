@@ -1,0 +1,15 @@
+{
+  "name": "IT Helpdesk Dashboard",
+  "short_name": "Helpdesk",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d6efd",
+  "theme_color": "#0d6efd",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/1041/1041916.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
